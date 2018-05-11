@@ -1,0 +1,39 @@
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+.hero, .top-news, .scores, .weather, .recent-news {
+  order: 10;
+}
+@media screen and (max-width: 549px) {
+  .nav {
+   width: 300px;
+   height: 100%;
+   position:absolute;
+   transform: translate(-300px, 0);
+   transition: transform 0.3s ease;
+  }
+  .nav.open {
+    transform: translate(0,0);
+    -webkit-transform: translate(0,0);
+  }
+  .burger {
+    display: inline-block;
+    position: absolute;
+    right: 10px;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .hero {
+    width: 50%;
+    order: 0;
+  }
+  .weather {
+    width: 50%;
+    order: 1;
+  }
+  .burger {
+    transform: translate(-800px, 0);
+  }
+}
