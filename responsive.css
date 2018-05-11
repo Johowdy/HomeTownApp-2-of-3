@@ -2,6 +2,10 @@
   display: flex;
   flex-wrap: wrap;
 }
+.burger {
+  position: absolute;
+  font-size: 2.5em;
+}
 .hero, .top-news, .scores, .weather, .recent-news {
   order: 10;
 }
@@ -10,6 +14,7 @@
    width: 300px;
    height: 100%;
    position:absolute;
+   -webkit-transform: translate(-300px, 0);
    transform: translate(-300px, 0);
    transition: transform 0.3s ease;
   }
@@ -19,11 +24,17 @@
   }
   .burger {
     display: inline-block;
-    position: absolute;
     right: 10px;
+    top: 10px;
+
+  }
+  .nav__item {
+    display: list-item;
+    border-bottom: 1px solid grey;
+    width: 100%;
+    text-align: left;
   }
 }
-
 @media screen and (min-width: 550px) {
   .hero {
     width: 50%;
@@ -35,5 +46,33 @@
   }
   .burger {
     transform: translate(-800px, 0);
+  }
+}
+@media screen and (min-width: 750px) {
+  .hero {
+    width: 60%;
+    order: 0;
+  }
+  .top-news {
+    width: 40%;
+    order: 1;
+  }
+  .weather {
+    width: 30%;
+    order: 4;
+  }
+  .scores {
+    width: 70%;
+    order: 3;
+  }
+}
+@media screen and (min-width: 950px) {
+  .content, .nav, .header__inner, main {
+    width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .header {
+    width: 100%;
   }
 }

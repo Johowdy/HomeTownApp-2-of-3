@@ -139,21 +139,8 @@ main {
  * Hero
  *
  */
- body {
-   width: 100%;
-   display: flex;
-   flex-wrap: wrap;
- }
- @media screen and (min-width: 550px) {
-   .hero {
-     width: 35%;
-     order: -1;
-   }
-   .weather {
-     width: 65%;
-     order: 1;
-   }
- }
+
+
 
 .hero {
   float: left;
